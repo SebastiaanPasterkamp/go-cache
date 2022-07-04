@@ -9,18 +9,18 @@ platform:
 
 steps:
   - name: golang:test
-    image: golang:1.17-stretch
+    image: golang:1.18-stretch
     commands:
       # 'go test -race ...' not supported on ARM
       - go test -parallel=2 -v -coverprofile cover.out -count=1 ./...
 
   - name: golang:coverage:report
-    image: golang:1.17-stretch
+    image: golang:1.18-stretch
     commands:
       - go tool cover -func cover.out
 
   - name: golang:run
-    image: golang:1.17-stretch
+    image: golang:1.18-stretch
     commands:
       - go run example/example.go
 
@@ -70,6 +70,6 @@ steps:
         **Message:** {{commit.message}}
 ---
 kind: signature
-hmac: f67b30de3408624aa120a25eb2fb4a1faf546c100774a131685611a5a1bfaefd
+hmac: aae575db5a9ede458028fc4c26a7307630a73e447e50c74381a34a3d24f1d1c6
 
 ...
