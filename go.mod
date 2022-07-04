@@ -2,10 +2,7 @@ module github.com/SebastiaanPasterkamp/go-cache
 
 go 1.18
 
-require (
-	github.com/go-redis/redis/v8 v8.11.5
-	github.com/go-redis/redismock/v8 v8.0.6
-)
+require github.com/go-redis/redis/v8 v8.11.5
 
 require (
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
