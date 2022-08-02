@@ -1,6 +1,6 @@
 module github.com/SebastiaanPasterkamp/go-cache
 
-go 1.18
+go 1.19
 
 require github.com/go-redis/redis/v8 v8.11.5
 
